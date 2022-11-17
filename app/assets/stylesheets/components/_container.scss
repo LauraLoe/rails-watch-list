@@ -1,0 +1,25 @@
+.container {
+  padding-top: 84px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  position: relative;
+
+  h4 {
+    margin-bottom: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  .button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: green;
+    padding: 16px 24px;
+    border-radius: 5px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white
+  }
+}

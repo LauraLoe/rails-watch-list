@@ -1,0 +1,29 @@
+<div class="banner">
+  <h2> <%= @list.name %> </h2>
+</div>
+<div class="container">
+  <div class="button">
+    <%= link_to "Add new movie", new_bookmark_path %>
+  </div>
+  <div class="card-container-movie">
+      <% @list.movies.each do |movie| %>
+        <div class="card-movie">
+          <%= image_tag movie.poster_url, alt: "movie_image", width: 200 %>
+          <div class="movie-info">
+            <div class="title">
+              <%= movie.title %>
+            </div>
+            <div class="overview">
+              <%= movie.overview %>
+            </div>
+            <div class="rating">
+              Rating: <%= movie.rating %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>
+
+
+<%# <%= link_to "Back to list", lists_path %>

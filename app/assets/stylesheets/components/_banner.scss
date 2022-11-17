@@ -1,0 +1,18 @@
+.banner {
+  // background-image: url("https://th-thumbnailer.cdn-si-edu.com/mrWJzJp3ya3mt_OelQP52AxW01E=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/Movie-theater-seating-470.jpg");
+  background-image: url("https://ereimers-sound.com/wp-content/uploads/2014/05/Movie-theater-Dark1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 56px;
+    text-shadow: 2px 2px 4px rgb(115, 107, 107);
+    text-align: center;
+  }
+}
