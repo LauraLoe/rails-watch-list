@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner" style="background-image: url(<%= cl_image_path @list.photo.key, height: 600, crop: :fill %>)">
   <h2> <%= @list.name %> </h2>
 </div>
 <div class="container">
@@ -10,15 +10,20 @@
         <div class="card-movie">
           <%= image_tag movie.poster_url, alt: "movie_image", width: 200 %>
           <div class="movie-info">
-            <div class="title">
-              <%= movie.title %>
+            <div class="header">
+              <div class="title">
+                <%= movie.title %>
+              </div>
+              <div class="rating">
+                • <%= movie.rating %>
+                <i class="fa-solid fa-star"></i>
+              </div>
             </div>
             <div class="overview">
               <%= movie.overview %>
             </div>
-            <div class="rating">
-              Rating: <%= movie.rating %>
-            </div>
+            <% raise %>
+            <%# <%= movie.comment %>
           </div>
         </div>
       <% end %>
