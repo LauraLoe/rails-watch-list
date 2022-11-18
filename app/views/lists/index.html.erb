@@ -6,7 +6,6 @@
   <h4>My Lists</h4>
   <div class="card-container">
     <% @lists.each do |list| %>
-      <%# <div class="card" style="background-image: url(https://i1.sndcdn.com/artworks-2L1Nark8HnoLuD1D-GfY1EA-t240x240.jpg);"> %>
       <div class="card" style="background-image: url(<%= cl_image_path list.photo.key, height: 400, crop: :fill %>);">
          <%= link_to list.name, list_path(list) %>
       </div>

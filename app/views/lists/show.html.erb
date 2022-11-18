@@ -3,7 +3,8 @@
 </div>
 <div class="container">
   <div class="button">
-    <%= link_to "Add new movie", new_bookmark_path %>
+    <%= link_to "Add new movie", bookmark_path %>
+    <%# #new_bookmark_path %>
   </div>
   <div class="card-container-movie">
       <% @list.movies.each do |movie| %>
@@ -11,7 +12,7 @@
         <div class="card-movie">
           <%= image_tag movie.poster_url, alt: "movie_image", width: 200 %>
           <div class="movie-info">
-            <div class="header">
+            <div class="info-header">
               <div class="title">
                 <%= movie.title %>
               </div>
@@ -23,9 +24,11 @@
             <div class="overview">
               <%= movie.overview %>
             </div>
-            <div class="comment">
+            <div class="info-footer">
               <i class="fa-sharp fa-solid fa-quote-left"></i>
               <%= bookmark.comment %>
+              <div id="spacer" style="width: 200px; height: 25px; margin-right:0px;"></div>
+              <%= link_to "Delete movie", list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list?" } %>
             </div>
           </div>
         </div>

@@ -27,6 +27,7 @@
   display: grid;
   grid-template-columns: 2fr 2fr;
   grid-gap: 24px;
+  padding-top: 24px;
 }
 
 .card-movie {
@@ -37,12 +38,12 @@
   align-items: center;
 
   .movie-info {
-    margin-left: 8px;
+    margin-left: 12px;
     margin-right: 8px;
     height: 280px;
 
 
-    .header {
+    .info-header {
       display: flex;
 
       .title {
@@ -69,11 +70,18 @@
       padding-bottom: 16px;
       margin-top: 16px;
       font-size: 14px;
-      height: 175px;
+      height: 165px;
     }
 
-    .comment {
+    .info-footer {
       display: flex;
+      position: relative;
+
+      a {
+        color: orange;
+        position: absolute;
+        right: 0;
+      }
     }
 
     .fa-quote-left {
